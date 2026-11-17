@@ -1,0 +1,27 @@
+# Gradle & Android Build Outputs
+.gradle/
+build/
+app/build/
+captures/
+*.apk
+*.ap_
+*.aab
+*.dex
+*.class
+
+# Local environment & signing secrets
+local.properties
+*.jks
+*.keystore
+keystore.properties
+
+# IDE & OS
+.idea/
+*.iml
+.DS_Store
+*.swp
+
+# Python
+__pycache__/
+*.pyc
+.venv/

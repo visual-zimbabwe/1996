@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<title>1996 - Magazine Gallery</title>
+<!-- Google Fonts: Great Vibes / Italianno / Playfair Display / Inter -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Italianno&amp;family=Playfair+Display:ital,wght@1,400;1,600&amp;family=Inter:wght@300;400;500&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+    :root {
+      --bg-canvas: #F0F0F0;
+    }
+    body {
+      background-color: var(--bg-canvas);
+      color: #2b2b2b;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      user-select: none;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .font-cursive {
+      font-family: 'Italianno', cursive;
+    }
+    /* Hide scrollbar for clean gallery look */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+    /* Smooth carousel snap */
+    .snap-mandatory-x {
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+    }
+    .snap-center-item {
+      scroll-snap-align: center;
+      scroll-snap-stop: always;
+    }
+    /* Gallery seamless input */
+    input::placeholder {
+      color: #8e8e8e;
+      font-style: italic;
+      letter-spacing: 0.02em;
+    }
+    input:focus {
+      outline: none;
+    }
+    /* Archival gallery paper effect */
+    .cover-shadow {
+      box-shadow: 0 16px 38px -12px rgba(0, 0, 0, 0.22), 0 4px 14px 0 rgba(0, 0, 0, 0.08);
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between antialiased selection:bg-neutral-300">
+<!-- Android System Status Bar Spacer -->
+<div class="w-full pt-3 px-6 flex justify-between items-center text-[11px] text-neutral-400 tracking-wider">
+<span>9:41</span>
+<div class="flex items-center space-x-1 tracking-widest text-[10px]">
+<span>1996</span>
+</div>
+</div>
+<!-- Header Section: Classic Cursive Title & Clean Search -->
+<header class="w-full px-6 pt-2 pb-1 flex flex-col items-center">
+<!-- App Name in Cursive Classic Font -->
+<h1 class="font-cursive text-6xl text-neutral-900 leading-none tracking-normal py-1">
+      1996
+    </h1>
+<!-- Minimalist Search Input: Max 15 chars, no border, no background box, seamless with canvas -->
+<div class="w-full max-w-[240px] mt-1 flex justify-center">
+<input autocomplete="off" class="w-full text-center bg-transparent border-none text-xs text-neutral-700 font-light focus:text-neutral-900 py-1" id="search-input" maxlength="15" oninput="filterCovers(this.value)" placeholder="Search 1996..." spellcheck="false" type="text"/>
+</div>
+</header>
+<!-- Gallery Main Area: Vivid Centerpiece Magazine Cover Carousel -->
+<main class="w-full flex-1 flex flex-col py-2"><div class="w-full grid grid-cols-2 gap-4 px-4 py-4" id="gallery-container"><article class="gallery-card flex flex-col items-center" data-title="vogue fashion style naomi october 1996"><div class="w-full aspect-[3/4] relative overflow-hidden rounded-[2px] cover-shadow transition-transform duration-500 hover:scale-[1.01]"><img alt="Vogue October 1996" class="w-full h-full object-cover select-none pointer-events-none" loading="eager" src="https://lh3.googleusercontent.com/aida/ALJJyrAvPem4ebKeMl2bTD7VqjKUDx4NOsJ8RjSHKSEcZnnZZzl0k2BHDHN34INWXyiukNqP5u5755ZU5_ycp5JrXZ6hTxMKcgyou6qpxmQnKR6SYv4anARP-G9x5r0WpjzXezpiCEjV8w7aNQODm5XK4WvX8z-J6Htk_EIMFT9CmMS0E6ByX53G9_fdPgLzw4wzQDPmtbSAwZwm_z5jf0YDy6gMmpgHXz3_koHPEhMGiE8"/></div><div class="w-full text-center mt-3"><p class="text-[11px] uppercase tracking-[0.25em] text-neutral-600 font-light">October 1996</p></div></article><article class="gallery-card flex flex-col items-center" data-title="rave on flux grunge rock music august 1996"><div class="w-full aspect-[3/4] relative overflow-hidden rounded-[2px] cover-shadow transition-transform duration-500 hover:scale-[1.01]"><img alt="Rave On! August 1996" class="w-full h-full object-cover select-none pointer-events-none" loading="lazy" src="https://lh3.googleusercontent.com/aida/ALJJyrBmron0k5x8hIYq37lf7Td8IUHTaUqL8a7wo7lWAurAxgNe_d6jp6rpVIF5NyXE-gLAZoj_O9HJ8Sh7L88sBH-Ial7umpC50H34mm3tyueus64ZnyMCdxgCYeI5osxTmzuTq1-Cydf71FPQ1CJ5yg7qzJ8eFThSrYSL6wq-CqxdHDrJ24JLcC2uK80gAOBDnO-ZVz1Crhm81gFLhvtziV4NJN-OBha_XdskFG7o5dVV"/></div><div class="w-full text-center mt-3"><p class="text-[11px] uppercase tracking-[0.25em] text-neutral-600 font-light">August 1996</p></div></article><article class="gallery-card flex flex-col items-center" data-title="cyberedge nintendo 64 playstation gaming november 1996"><div class="w-full aspect-[3/4] relative overflow-hidden rounded-[2px] cover-shadow transition-transform duration-500 hover:scale-[1.01]"><img alt="CyberEdge November 1996" class="w-full h-full object-cover select-none pointer-events-none" loading="lazy" src="https://lh3.googleusercontent.com/aida/ALJJyrAee4PdN1z60B8_Xkf14AiXOpaDS4fj0uCrof4F8ju98yz4TBFi03XIswZQ0OLnj9eYxiXBRXseu9Ph8mLWNeCaSMthcaM6KNtacsy0zwasn8AjmHtf0-ceTTgUvzkR0m7PWHQ32dTyQKZJloCAW3m5iROm1PcejUbkR45UyX1zh91CjyKV2zhQwkixSUWMHpX-3_3IESzzT3VLVeOzQsy_O69YcnZ1t45jWiH6TiTm"/></div><div class="w-full text-center mt-3"><p class="text-[11px] uppercase tracking-[0.25em] text-neutral-600 font-light">November 1996</p></div></article><article class="gallery-card flex flex-col items-center" data-title="premiere night harbor cinema movie july 1996"><div class="w-full aspect-[3/4] relative overflow-hidden rounded-[2px] cover-shadow transition-transform duration-500 hover:scale-[1.01]"><img alt="Premiere July 1996" class="w-full h-full object-cover select-none pointer-events-none" loading="lazy" src="https://lh3.googleusercontent.com/aida/ALJJyrA-StdigXrp1eH33mQoSJOqISFP095dfw9TkupFL-OJ3pNRAP_n6JYWCQd0hZZ8bBss69AoxbXcQXa_i-gHy977SXbYtpvl1UktePZiYFcbGNxXGky_18n3bVZgC_eQPxrxdv9d0PDKojU5ffULRoHBZy8Af-qw24su6T1HoMuIw11ZN34-m2aCYD7SqTSrjK_7Z-6R1hhHPGpZYhAUyrHU2qxX7jeTL4atf1v4dcrs"/></div><div class="w-full text-center mt-3"><p class="text-[11px] uppercase tracking-[0.25em] text-neutral-600 font-light">July 1996</p></div></article><article class="gallery-card flex flex-col items-center" data-title="vogue fashion style naomi october 1996"><div class="w-full aspect-[3/4] relative overflow-hidden rounded-[2px] cover-shadow transition-transform duration-500 hover:scale-[1.01]"><img alt="Vogue October 1996" class="w-full h-full object-cover select-none pointer-events-none" loading="lazy" src="https://lh3.googleusercontent.com/aida/ALJJyrAvPem4ebKeMl2bTD7VqjKUDx4NOsJ8RjSHKSEcZnnZZzl0k2BHDHN34INWXyiukNqP5u5755ZU5_ycp5JrXZ6hTxMKcgyou6qpxmQnKR6SYv4anARP-G9x5r0WpjzXezpiCEjV8w7aNQODm5XK4WvX8z-J6Htk_EIMFT9CmMS0E6ByX53G9_fdPgLzw4wzQDPmtbSAwZwm_z5jf0YDy6gMmpgHXz3_koHPEhMGiE8"/></div><div class="w-full text-center mt-3"><p class="text-[11px] uppercase tracking-[0.25em] text-neutral-600 font-light">October 1996</p></div></article><article class="gallery-card flex flex-col items-center" data-title="rave on flux grunge rock music august 1996"><div class="w-full aspect-[3/4] relative overflow-hidden rounded-[2px] cover-shadow transition-transform duration-500 hover:scale-[1.01]"><img alt="Rave On! August 1996" class="w-full h-full object-cover select-none pointer-events-none" loading="lazy" src="https://lh3.googleusercontent.com/aida/ALJJyrBmron0k5x8hIYq37lf7Td8IUHTaUqL8a7wo7lWAurAxgNe_d6jp6rpVIF5NyXE-gLAZoj_O9HJ8Sh7L88sBH-Ial7umpC50H34mm3tyueus64ZnyMCdxgCYeI5osxTmzuTq1-Cydf71FPQ1CJ5yg7qzJ8eFThSrYSL6wq-CqxdHDrJ24JLcC2uK80gAOBDnO-ZVz1Crhm81gFLhvtziV4NJN-OBha_XdskFG7o5dVV"/></div><div class="w-full text-center mt-3"><p class="text-[11px] uppercase tracking-[0.25em] text-neutral-600 font-light">August 1996</p></div></article></div><div class="hidden text-center py-12" id="no-results"><p class="text-xs tracking-widest uppercase text-neutral-400 font-light">No 1996 issue found</p></div></main>
+<!-- Gallery Footer: Quiet Navigation Controls -->
+<!-- Android Home Indicator Bar -->
+<div class="w-28 h-1 bg-neutral-300 rounded-full mx-auto mb-2"></div>
+<!-- Carousel Interaction Script -->
+<script>
+    const gallery = document.getElementById('gallery-container');
+    const cards = document.querySelectorAll('.gallery-card');
+    const dots = document.querySelectorAll('#pagination span');
+    const counter = document.getElementById('counter');
+    const noResults = document.getElementById('no-results');
+
+    function updateActiveState() {
+      const scrollLeft = gallery.scrollLeft;
+      const cardWidth = cards[0].offsetWidth + 28; // card width + gap
+      const activeIndex = Math.round(scrollLeft / cardWidth);
+
+      dots.forEach((dot, idx) => {
+        if (idx === activeIndex) {
+          dot.className = 'w-1.5 h-1.5 rounded-full bg-neutral-800 transition-all duration-300';
+        } else {
+          dot.className = 'w-1.5 h-1.5 rounded-full bg-neutral-300 transition-all duration-300';
+        }
+      });
+
+      if (counter && activeIndex < cards.length) {
+        counter.textContent = `${activeIndex + 1} / ${cards.length}`;
+      }
+    }
+
+    gallery.addEventListener('scroll', () => {
+      window.requestAnimationFrame(updateActiveState);
+    }, { passive: true });
+
+    function scrollPrev() {
+      const cardWidth = cards[0].offsetWidth + 28;
+      gallery.scrollBy({ left: -cardWidth, behavior: 'smooth' });
+    }
+
+    function scrollNext() {
+      const cardWidth = cards[0].offsetWidth + 28;
+      gallery.scrollBy({ left: cardWidth, behavior: 'smooth' });
+    }
+
+    function filterCovers(query) {
+      const q = query.trim().toLowerCase();
+      let matchCount = 0;
+
+      cards.forEach(card => {
+        const titleData = card.getAttribute('data-title') || '';
+        if (!q || titleData.includes(q)) {
+          card.style.display = 'flex';
+          matchCount++;
+        } else {
+          card.style.display = 'none';
+        }
+      });
+
+      if (matchCount === 0) {
+        gallery.classList.add('hidden');
+        noResults.classList.remove('hidden');
+        document.getElementById('pagination').classList.add('hidden');
+      } else {
+        gallery.classList.remove('hidden');
+        noResults.classList.add('hidden');
+        document.getElementById('pagination').classList.remove('hidden');
+      }
+    }
+  </script>
+</body>
+</html>
