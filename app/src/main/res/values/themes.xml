@@ -1,0 +1,9 @@
+<resources>
+    <style name="Theme.Editorial1996" parent="android:Theme.Material.Light.NoActionBar">
+        <item name="android:windowBackground">@color/canvas_bg</item>
+        <item name="android:statusBarColor">@color/canvas_bg</item>
+        <item name="android:navigationBarColor">@color/canvas_bg</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+    <color name="canvas_bg">#F0F0F0</color>
+</resources>
